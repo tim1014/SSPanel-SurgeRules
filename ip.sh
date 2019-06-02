@@ -73,6 +73,7 @@ Func_CheckBlock_ChinaIP_TCP() {
 }
 
 MainFunc() {
+	Func_CheckBlock_ChinaIP_ICMP
 	Func_CheckBlock_ChinaIP_TCP
     if [ "${CheckBlock_ChinaIP_ICMP_Blocked}" = "0" ] && [ "${CheckBlock_ChinaIP_ICMP_Blocked}" = "0" ]; then
         echo -e "${Msg_Success}IP ${MyIP} 没有被阻断，可以正常使用 !"
