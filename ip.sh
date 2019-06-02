@@ -77,7 +77,7 @@ MainFunc() {
 	Func_CheckBlock_ChinaIP_TCP
     if [ "${CheckBlock_ChinaIP_ICMP_Blocked}" = "0" ] && [ "${CheckBlock_ChinaIP_ICMP_Blocked}" = "0" ]; then
         echo -e "${Msg_Success}IP ${MyIP} 没有被阻断，可以正常使用 !"
-		exit 100
+		exit 0
 	fi
     echo -e "${Msg_Info}正在释放${interface_name}上的当前IP ..."
     Func_DHCPRelease
